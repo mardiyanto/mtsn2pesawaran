@@ -17,6 +17,7 @@
                <ul class='treeview-menu'>
 
                 <li><a href='index.php?aksi=mhs'><i class='fa fa-arrows-h'></i>Pendaftaran</a></li>
+                <li><a href='index.php?aksi=halaman'><i class='fa fa-arrows-h'></i>Informasi</a></li>
                 <li><a href='index.php?aksi=kritik'><i class='fa fa-arrows-h'></i>Kritik</a></li>
                </ul>
 </li>

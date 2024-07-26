@@ -295,11 +295,11 @@ echo"
         <input type='text' class='form-control' value='$t[nama_app]' name='nama_app'/><br>
         <label>Nama</label>
         <input type='text' class='form-control' value='$t[nama]' name='jd'/><br>
-		<label>Alias</label>
+		<label>email/map</label>
         <input type='text' class='form-control' value='$t[alias]' name='alias'/><br>
-		<label>Tahun</label>
+		<label>No hp</label>
         <input type='text' class='form-control' value='$t[tahun]' name='tahun'/><br>
-		<label>Alamat</label>
+		<label>Alamat/GMAP</label>
         <input type='text' class='form-control' value='$t[alamat]' name='alamat'/><br>
         <label>Gambar Begroud Aplikasi</label>
         <input type='file' class='smallInput'  name='gambar'/><br>
