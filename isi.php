@@ -294,22 +294,15 @@ elseif($_GET['aksi']=='lupapassword'){
                 </div>
                 <div class='col-lg-6 wow fadeInUp' data-wow-delay='0.5s'>
                     <h2 class='mb-4'>Reset Password Login Sistem</h2>
-                    <form method='post' action='utama.php?aksi=inputhubungi'>
+                    <form method='post' action='request_reset.php'>
                     <div class='row g-3'>
             
                         <div class='col-sm-12'>
                             <div class='form-floating'>
-                                <input type='email' class='form-control' name='email' id='mail' placeholder='Email Anda'>
-                                <label for='mail'>Email Anda</label>
+                                <input type='email' class='form-control' name='email' id='mail' placeholder='Email atau No. HP: Anda'>
+                                <label for='mail'>Email atau No. HP:</label>
                             </div>
                         </div>
-                        <div class='col-sm-12'>
-                            <div class='form-floating'>
-                                <input type='text' class='form-control' name='nik' placeholder='Nik Anda'>
-                                <label for='mobile'>NIK Anda</label>
-                            </div>
-                        </div>
-            
                         <div class='col-6 text-center'>
                             <button class='btn btn-primary w-100 py-3' type='submit'>Reset Now</button>
                         </div>
