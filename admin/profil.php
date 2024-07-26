@@ -22,7 +22,7 @@
                     echo"<a href='#' class='btn btn-success btn-block'><b>DITERIMA</b></a>";
                    } else { 
                     echo"<a href='#' class='btn btn-warning btn-block'><b>ANDA TIDAK TERIMA</b></a>";
-                      } ?>
+                  } ?>
                   
                 </div><!-- /.box-body -->
               </div><!-- /.box -->
@@ -153,9 +153,8 @@
          </div> </div></div></div>
            
                   </div><!-- /.tab-pane -->
-                  <a class="btn btn-primary px-4 py-2" href="../cetak_daftar.php?id=<?php echo"$t[id_sesi]";?>" target="_blank">CETAK PENDAFTARAN</a>
-                  <a class="btn btn-primary px-4 py-2" <?php echo" onclick=\"return confirm ('Apakah yakin ingin Menerima Mahasiswa $t[nama] ?')\" "; ?> href="index.php?aksi=prosesedit&id_daftar=<?php echo"$t[id_daftar]"; ?> " >TERIMA</a>
-                </div><!-- /.tab-content -->
+                  <a class="btn btn-success px-4 py-2" <?php echo" onclick=\"return confirm ('Apakah yakin ingin Menerima Mahasiswa $t[nama] ?')\" "; ?> href="index.php?aksi=prosesedit&id_daftar=<?php echo"$t[id_daftar]"; ?> " >TERIMA</a>
+                  <a class="btn btn-danger px-4 py-2" <?php echo" onclick=\"return confirm ('Apakah yakin ingin Menerima Mahasiswa $t[nama] ?')\" "; ?> href="index.php?aksi=prosetolak&id_daftar=<?php echo"$t[id_daftar]"; ?> " >TOLAK</a>     </div><!-- /.tab-content -->
               </div><!-- /.nav-tabs-custom -->
             </div><!-- /.col -->
           </div><!-- /.row -->

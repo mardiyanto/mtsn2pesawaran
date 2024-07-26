@@ -73,8 +73,9 @@ elseif($_GET['aksi']=='mhs'){
                             <div class='panel-heading'>INFORMASI 
                             </div>
                             <div class='panel-body'>	
-                          <a href='index.php?aksi=mhs' class='btn btn-info' ><i class='fa fa-arrows-h'></i>Baru</a>
-                          <a href='index.php?aksi=mhsterima' class='btn btn-info' ><i class='fa fa-arrows-h'></i>Di terima</a><br><br>
+                            <a href='index.php?aksi=mhs' class='btn btn-info' ><i class='fa fa-arrows-h'></i>Baru</a>
+                            <a href='index.php?aksi=mhsterima&status=1' class='btn btn-info' ><i class='fa fa-arrows-h'></i>Di terima</a>
+                            <a href='index.php?aksi=mhsterima&status=2' class='btn btn-info' ><i class='fa fa-arrows-h'></i>Di Tolak</a><br><br>
                                    <div class='table-responsive'>		
          <table id='example1' class='table table-bordered table-striped'>
                                         <thead>
@@ -146,8 +147,12 @@ elseif($_GET['aksi']=='mhs'){
 elseif($_GET['aksi']=='prosesedit'){
     mysqli_query($koneksi,"UPDATE daftar SET status='1' WHERE id_daftar='$_GET[id_daftar]'");
     echo "<script>window.alert('DATA BERHASIL DI SIMPAN'); window.location=('index.php?aksi=mhsterima')</script>";
-    }
-    elseif($_GET['aksi']=='mhsterima'){
+}
+elseif($_GET['aksi']=='prosetolak'){
+    mysqli_query($koneksi,"UPDATE daftar SET status='2' WHERE id_daftar='$_GET[id_daftar]'");
+    echo "<script>window.alert('DATA BERHASIL DI SIMPAN'); window.location=('index.php?aksi=mhsterima')</script>";
+}
+elseif($_GET['aksi']=='mhsterima'){
         echo"<div class='row'>
         <div class='col-lg-12'>
             <div class='panel panel-default'>
@@ -155,7 +160,8 @@ elseif($_GET['aksi']=='prosesedit'){
                 </div>
                 <div class='panel-body'>	
                 <a href='index.php?aksi=mhs' class='btn btn-info' ><i class='fa fa-arrows-h'></i>Baru</a>
-                <a href='index.php?aksi=mhsterima' class='btn btn-info' ><i class='fa fa-arrows-h'></i>Di terima</a><br><br>
+                <a href='index.php?aksi=mhsterima&status=1' class='btn btn-info' ><i class='fa fa-arrows-h'></i>Di terima</a>
+                <a href='index.php?aksi=mhsterima&status=2' class='btn btn-info' ><i class='fa fa-arrows-h'></i>Di Tolak</a><br><br>
                        <div class='table-responsive'>		
     <table id='example1' class='table table-bordered table-striped'>
                             <thead>
@@ -169,7 +175,7 @@ elseif($_GET['aksi']=='prosesedit'){
             ";
     
     $no=0;
-    $tebaru=mysqli_query($koneksi," SELECT * FROM daftar WHERE status='1' ORDER BY daftar.id_daftar DESC");
+    $tebaru=mysqli_query($koneksi," SELECT * FROM daftar WHERE status='$_GET[status]' ORDER BY daftar.id_daftar DESC");
     while ($t=mysqli_fetch_array($tebaru)){	
     $no++;
     $nomor_hp = $t['no_hp']; // Nomor telepon dengan format lokal
